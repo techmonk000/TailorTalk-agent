@@ -1,7 +1,7 @@
 import os
 import openai
 from datetime import datetime, timedelta
-from calender_utils import check_availability, create_event
+from backend.calender_utils import check_availability, create_event
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 

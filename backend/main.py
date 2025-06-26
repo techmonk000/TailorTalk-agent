@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from agent import langgraph_response
+from backend.agent import langgraph_response
 
 app = FastAPI()
 
