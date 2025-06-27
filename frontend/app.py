@@ -14,6 +14,7 @@ if user_input:
     st.session_state.chat.append(("user", user_input))
     with st.spinner("Thinking..."):
         res = requests.post("http://localhost:8000/chat", json={"message": user_input})
+        res.raise_for_status()
         bot_reply = res.json()["response"]
         st.session_state.chat.append(("bot", bot_reply))
 
